@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_social: 1
+  link: MyString
+  user: one
+
+two:
+  name_social: 1
+  link: MyString
+  user: two
