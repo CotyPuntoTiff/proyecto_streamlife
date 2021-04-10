@@ -18,9 +18,14 @@
         <td><%= coment.content %></td>
         <td><%= coment.post %></td>
         <td><%= coment.user %></td>
+        <% if current_user.admin == true || current_user.id == coment.user.id %>
+            <td><%= link_to 'Edit', edit_post_path(post)%></td>
+            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% elsif current_user.id == coment.post.user.id %>
+            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+        
         <td><%= link_to 'Show', coment %></td>
-        <td><%= link_to 'Edit', edit_coment_path(coment) %></td>
-        <td><%= link_to 'Destroy', coment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

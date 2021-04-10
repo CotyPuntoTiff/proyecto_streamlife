@@ -14,6 +14,8 @@
   <strong>User:</strong>
   <%= @coment.user %>
 </p>
-
-<%= link_to 'Edit', edit_coment_path(@coment) %> |
+ <% if current_user.admin == true || current_user.id == post.user.id%>
+    <td><%= link_to 'Edit', edit_coment_path(coment)%></td>
+    <td><%= link_to 'Destroy', coment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>|
 <%= link_to 'Back', coments_path %>

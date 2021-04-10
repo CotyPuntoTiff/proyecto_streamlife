@@ -4,7 +4,6 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :content
       t.datetime :program 
-      t.integer :like, default: 0
       t.references :user, foreign_key: true
 
       t.timestamps

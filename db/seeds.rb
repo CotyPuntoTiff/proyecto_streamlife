@@ -10,7 +10,8 @@ User.delete_all
 Post.delete_all 
 Coment.delete_all 
 
-user1 = User.create(user_name: "CotyPuntoTiff",email: "coty@mail.com", encrypted_password: "password"  )
+user1 = User.create(user_name: "CotyPuntoTiff",email: "coty@mail.com", encrypted_password: "password")
+user2 = User.create(user_name: "admin",email: "admin@mail.com", encrypted_password: "password", admin: true)
 
 Post.create(
     [
