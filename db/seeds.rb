@@ -28,4 +28,4 @@ Post.create(
             program: DateTime.strptime("04/07/2021 21:30", "%m/%d/%Y %H:%M")
         }
     ]
-)User.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+)User.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?Admin.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
