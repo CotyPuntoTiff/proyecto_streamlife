@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     end
 
     def posts
-        
+        @user = User.find(params[:user_id])
     end
     
 end
