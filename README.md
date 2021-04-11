@@ -29,3 +29,4 @@ https://trello.com/b/9Wo8mFeY/stream-life
 
 * Gems
 - devise
+- activeadmin
