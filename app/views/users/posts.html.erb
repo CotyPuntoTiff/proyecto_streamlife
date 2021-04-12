@@ -4,7 +4,7 @@
         <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Sobre mi</button>
         <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Fotos</button>
         <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Posteos</button>
-        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Programacion</button>
+        <button class="nav-link" id="nav-program-tab" data-bs-toggle="tab" data-bs-target="#nav-program" type="button" role="tab" aria-controls="nav-program" aria-selected="false">Programacion</button>
     </div>
     </div>
     </nav>
@@ -12,47 +12,80 @@
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
     <div class="container-md">
         <div class="row">
-            <p class="col-4">Foto de perfil, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis doloremque necessitatibus tenetur dolore voluptas saepe, pariatur quisquam ab veritatis a reprehenderit! Vitae quis aspernatur animi fugit facilis magnam quasi maxime. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati suscipit quibusdam fuga cum saepe reprehenderit! Veritatis voluptates autem animi! Esse fugiat aliquam amet quis reprehenderit neque facilis. Obcaecati, expedita asperiores! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam quas facere assumenda veritatis quod, quo quisquam accusantium est veniam cupiditate ipsum impedit quae, temporibus molestias laudantium quia modi dicta rerum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus tempora natus ipsum dolorem hic ipsa. Temporibus eius quaerat vero ratione doloremque necessitatibus esse sit laboriosam! Dolores, animi sequi? Sequi, at.</p>
+            <p class="col-4">FOTO DE PERFIL DE 180X180PX .  <br><br><br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis doloremque necessitatibus tenetur dolore voluptas saepe, pariatur quisquam ab veritatis a reprehenderit! Vitae quis aspernatur animi fugit facilis magnam quasi maxime. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati suscipit quibusdam fuga cum saepe reprehenderit! Veritatis voluptates autem animi! Esse fugiat aliquam amet quis reprehenderit neque facilis. Obcaecati, expedita asperiores! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam quas facere assumenda veritatis quod, quo quisquam accusantium est veniam cupiditate ipsum impedit quae, temporibus molestias laudantium quia modi dicta rerum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus tempora natus ipsum dolorem hic ipsa. Temporibus eius quaerat vero ratione doloremque necessitatibus esse sit laboriosam! Dolores, animi sequi? Sequi, at.</p>
             <div class="col">
                 <p class="col">nickname</p>
                 <p class="col">nivel de cuenta</p>
+                <div class="col">
+                    <div class="row">
+                        <p class="col-3">instagram</p>
+                        <p class="col-3">facebook</p>
+                        <p class="col-3">twitch</p>
+                        <p class="col-3">twitter</p>
+                    </div>
+                    <div class="row">
+                        <p class="col-3">youtube</p>
+                        <p class="col-3">steam</p>
+                        <p class="col-3">riot</p>
+                        <p class="col-3">contacto</p>
+                    </div>
+                </div>
             </div>
         </div>
-        
-            <div class="row">
-                <p class="col-3">instagram</p>
-                <p class="col-3">facebook</p>
-                <p class="col-3">twitch</p>
-                <p class="col-3">twitter</p>
-            </div>
-            <div class="row">
-                <p class="col-3">youtube</p>
-                <p class="col-3">steam</p>
-                <p class="col-3">riot</p>
-                <p class="col-3">contacto</p>
-            </div>
     </div>
 
     </div>
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
     Filtrar post por post que tengan fotos
         <% @user.posts.each do |post| %>
-        <p><%= post.title %></p>
-        <p><%= post.content %></p>
+    <section class ="card container">
+        <img src="..." class="card-img-top" alt="...">
+        <p class="row">Foto del post de 1800x1920px </p>
+         <div class="card-body">
+            <h5 class="card-title"><%= post.title %></h5>
+                agregar un if! si tiene o no programa
+              <p><%= post.program %></p>
+
+            <p>LVL icono y contador</p>
+            <a href="#" class="card-link">Ver comentarios, LINK A COMENTARIOS DEL POST</a>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+
         <% end %>
+    </section>
+
     </div>
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
     <%# Agregar contenido a mostrar %>
-        <% @user.posts.each do |post| %>
-        <p><%= post.title %></p>
-        <p><%= post.content %></p>
+            <% @user.posts.each do |post| %>
+    <section class ="card container">
+         <div class="card-body">
+            <h5 class="card-title"><%= post.title %></h5>
+                agregar un if! si tiene o no programa
+              <p><%= post.program %></p>
+            <p>LVL icono y contador</p>
+            <a href="#" class="card-link">Ver comentarios, LINK A COMENTARIOS DEL POST</a>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+
         <% end %>
+    </section>
     </div>
-     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-    <%# post filtrados por programacion, separando los antiguos y los proximamente %>
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">Anteriores</div>
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">Proximos</div>
-       
-    </div>
-    </div>
+   
+        <div class="tab-pane fade" id="nav-program" role="tabpanel" aria-labelledby="nav-program-tab">
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link " href="#">proximos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pasados</a>
+                </li>
+            </ul>
+            <hr>
+    post filtrados por programacion, separando los antiguos y los proximamente
+
+    JavaScript behavior en boostrap4
+
+        </div>
+
 </div>
