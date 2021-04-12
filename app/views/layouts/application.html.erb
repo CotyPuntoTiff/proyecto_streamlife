@@ -9,25 +9,31 @@
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
 
-  <body>
+    <body>
   
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">StreamLife</a>
+        <nav class="navbar navbar-expand-lg nav-foot bg-info">
+        <div class="container">
+            <a class="navbar-brand px-5" href="#"><span class="logo-text">StreamLife</span> </a>
 
-<div class= "text-right">
-        <% if current_user %>
-         <p>FOTO DE AVATAR EN CIRCULO QUE LLEVA AL PERFIL</p>
-            <%= link_to  "Cerrar sesión", destroy_user_session_path, method: :delete %>
-        <% else %>
-            <%= link_to  "Iniciar sesión", new_user_session_path %>
-            <%= link_to  "Registrarse", new_user_registration_path %>
-        <% end %>
-</div>
-    </nav>
+            <div class="py-4">
+                
+                <% if current_user %>
+                <a title="" href="#"><img src="" alt="" /></a>
+                    <span>FOTO DE AVATAR EN CIRCULO QUE LLEVA AL PERFIL</span>
+                    <span class="nickname">Nickname!!</span>
+                    <span><%= link_to  "Cerrar sesión", destroy_user_session_path, method: :delete %></span>
+                    <% else %>
+                        <span><%= link_to  "Iniciar sesión", new_user_session_path %></span>
+                        <span><%= link_to  "Registrarse", new_user_registration_path %></span>
+                    <% end %>
+                
+            </div>
+        </div>
+        </nav>
         <p class="alert"><%= alert %></p>
         <%= yield %>
-        <footer>
-        <p>Todos los derechos reservados © 2021, StreamLife</p>
+        <footer class="nav-foot text-center bg-info py-5">
+            <p>Todos los derechos reservados © 2021,<span class="logo-text">StreamLife</span></p>
         </footer>
     </body>
 </html>
